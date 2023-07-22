@@ -1,0 +1,117 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1560762484-813fc97650a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    transition: filter 0.7s;
+}
+h1{
+    font-size: 60px;
+    color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.btn{
+    padding: 10px 20px;
+    width: 200px;
+    cursor: pointer;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.btn:hover{
+    filter: brightness(0.8);
+}
+.active.container{
+    filter: blur(5px) brightness(0.7);
+
+}
+.popup-container{
+    position: fixed;
+    left: 50px;
+    transform: translateX(-50);
+    width: 400px;
+    height: 200px;
+    top: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("https://images.unsplash.com/photo-1529236183275-4fdcf2bc987e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.7s;
+}
+ h4{
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+label{
+    color: blueviolet;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.popup-btn{
+    background-color: orangered;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid;
+}
+input{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.input::placeholder{
+    color: lightgray;
+
+}
+.close-icon{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-icon:hover{
+    color: orangered;
+}
+.active.popup-container{
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+}
+
+@media screen and (min-width: 320px) {
+.popup-container{
+    width: 200px;
+    height: 400px;
+    margin-left: 20px;
+    padding: 5px 5%;
+}
+.input{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    
+}
+    
+}
